@@ -1,0 +1,65 @@
+<!-- INÍCIO DO CONTEÚDO -->
+<section class="content-header">
+  <h1>
+
+  </h1>
+</section>
+
+
+<section class="content">
+
+  <div class="row">
+      <div class="col-xs-12">
+        <div class="box box-solid">
+          <div class="box-header with-border">
+            <i class="fa fa-home"></i>
+            <!-- essa ? é o operador de navegacao segura, pois na primeira vez que chamar o objeto restaurant vai tá undenifed"-->
+            <h3 class="box-title">{{restaurant?.name}}</h3><span class="pull-right"><i class="fa fa-star"></i> {{restaurant?.rating}}</span>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <div class="col-sm-3 col-xs-12" *ngIf = "restaurant"><!--ngIf -> se o restaurant existir, massa, senao.. funfou.. vc ta busca algo que "nao existe"
+              note que sem o ngIf toda vez que entrarmos na pagine e tentar mudar de restaurante , se gerava problema no nome
+              pode gerar problema no caminho tbm... ela vai dar um 404 null undefined, -->
+              <img class="box-img-detail" [src] = "restaurant?.imagePath" />
+            </div>
+
+            <dl class="col-sm-9 col-xs-12">
+              <dt>Categoria</dt>
+              <dd>{{restaurant?.category}}</dd>
+              <dt>Quem somos</dt>
+              <dd>{{restaurant?.about}}</dd>
+              <dt>Horários</dt>
+            <dd>{{restaurant?.hours}}</dd>
+            </dl>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer detail-footer">
+          <a class="pull-left" routerLinkActive = "detail-active" [routerLink] = "['menu']">
+        <!--  <a class="pull-left detail-active" [routerLink] = "['menu']">
+        note que essa classe detail-active tbm vai "sumir"..-->
+        Menu
+          </a>
+      <!---    <a class="pull-right" href="detail-restaurant-reviews.html">
+      -->
+      <a class="pull-right"  routerLinkActive = "detail-active" [routerLink] = "['reviews']"> <!-- sem a barra pois m é partir da raiz -->
+             Avaliações
+          </a>
+        </div>
+        </div>
+      </div>
+      <!-- /.col-xs-12 -->
+
+  </div>
+
+
+  <div class="row">
+  <!-- tava aqui -->
+  <!--<mt-menu></mt-menu> nao mais fixo.. dinamico agoar -->
+  <router-outlet></router-outlet>
+  <!-- usou essa porra aqui tem usar o routerLinks aqui em cima, substituir os hrefs"
+  e routerLinkActivate pra ,pstar que ele ta ativo-->
+</div>
+
+</section>
+<!-- FIM DO CONTEÚDO -->
