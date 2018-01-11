@@ -26,6 +26,7 @@
     "font-awesome": "4.7.0",
     "intl": "1.2.5",
     "jquery": "3.1.1",
+    "lodash": "^4.14.2",
     "reflect-metadata": "0.1.9",
     "rxjs": "5.1.0",
     "ts-helpers": "1.1.2",
@@ -35,6 +36,7 @@
     "@angular/cli": "1.2.7",
     "@angular/compiler-cli": "4.0.0",
     "@types/jasmine": "2.5.38",
+    "@types/lodash": "^4.14.92",
     "@types/node": "7.0.5",
     "codelyzer": "2.0.0",
     "jasmine-core": "2.5.2",
@@ -49,5 +51,17 @@
     "tslint": "4.5.0",
     "typescript": "2.2.0",
     "webdriver-manager": "10.2.5"
-  }
+  },
+  "description": "## 1. Passos para começar",
+  "main": "karma.conf.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jctvEC/meatApp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "bugs": {
+    "url": "https://github.com/jctvEC/meatApp/issues"
+  },
+  "homepage": "https://github.com/jctvEC/meatApp#readme"
 }
