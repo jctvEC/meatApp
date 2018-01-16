@@ -1,6 +1,7 @@
 <a [routerLink]="['/restaurants', restaurant.id]">
   <div class="place-info-box">
     <span class="place-info-box-icon"><img [src]="restaurant.imagePath" /></span>
+      <!-- note o property binding vindo pro sletor src da tag img, usamos o obj restaurant, atributo imagePath -->
 
     <div class="place-info-box-content">
       <span class="place-info-box-text">{{restaurant.name}}</span>

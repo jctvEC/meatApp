@@ -38,7 +38,9 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [RestaurantsService],
-  bootstrap: [AppComponent]
+  providers: [RestaurantsService],//pra injetar (dependecias) servicos temos que declarar ele aqui em providers,
+  //se for dentro de um @component({providers: RestaurantsService})aqui fica disponivel pra o compnet e seus filhos
+  //aqui no app.module, fica disponivel pra todos os componentes da aplicacao
+  bootstrap: [AppComponent]//starta a aplicacao
 })
 export class AppModule { }

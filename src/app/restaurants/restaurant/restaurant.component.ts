@@ -12,7 +12,7 @@ import {Restaurant} from './restaurant.model'
 })
 export class RestaurantComponent implements OnInit {
 
-@Input() restaurant: Restaurant
+@Input() restaurant: Restaurant//vamos ter de receber os dados de algum lugar. olhar anotacoes sobre esse decorator
 
   constructor() { }
 
