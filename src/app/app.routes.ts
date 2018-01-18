@@ -11,11 +11,11 @@ export const ROUTES: Routes = [
   {path: 'about', component:  AboutComponent},
 {path: '', component: HomeComponent},
 {path: 'restaurants', component: RestaurantsComponent},
-{path: 'restaurants/:id', component: RestaurantDetailComponent,
-  children: [
-    {path: '',redirectTo:'menu', pathMatch: 'full'},//a padrao, restaurants/id
-    {path: 'menu', component : MenuComponent},//restaurants/id/menu
-    {path: 'reviews', component : ReviewsComponent},//restaurants/id/reviews
+{path: 'restaurants/:id', component: RestaurantDetailComponent, //usando o /:id para parametrizar
+  children: [//isso aqui que me faz ter a possibilidade de ter o outlet no rest-detail?
+    {path: '',redirectTo:'menu', pathMatch: 'full'},//a padrao, restaurants/id se tiver so o /id vai redirectTo do menu
+    {path: 'menu', component : MenuComponent},//restaurants/id/menu//subrota
+    {path: 'reviews', component : ReviewsComponent},//restaurants/id/reviews//subrota
 
   ]}
 

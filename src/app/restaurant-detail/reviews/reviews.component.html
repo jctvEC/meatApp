@@ -2,11 +2,11 @@
 <!-- removemos todos os outros e deixamos um só que seja pegado no json,
 poderia aqui, se criar tambem um novo componente para o reviews entretanto
 pode ser desnecessãrio e sendo assim, fazemos apenar uso das diretivas
-como ngfor(Para interrar... dentro da div que se repete...  as outras avaliacoes) e ngif(visibilidade, nunca usar o hidden do DOM..). -->
+como ngfor(Para interar... dentro da div que se repete...  as outras avaliacoes) e ngif(visibilidade, nunca usar o hidden do DOM..). -->
 <div class="col-xs-12 col-sm-6" *ngFor="let review of reviews | async">
   <!-- note que aqui na precimos fazer como fizemos ngFor:"item of menu | async" [menuItem]="item" pois ela nao é um array nem tem componente proprio-->
-  <!-- ao inves de fazer o subscreibe do Observable que ele se inscreve dentro do componente pega a resposta, atribuir a uma propriedade do componente,
-  o pipe vai fazer isso pra gente,  pegar esses dados e interrar sobre eles. "Vantagem".
+  <!-- ao inves de fazer o subscribe do Observable que ele se inscreve dentro do componente pega a resposta, atribuir a uma propriedade do componente,
+  o pipe vai fazer isso pra gente,  pegar esses dados e interar sobre eles. "Vantagem".
 -->
   <div class="box box-solid">
     <div class="box-header with-border">

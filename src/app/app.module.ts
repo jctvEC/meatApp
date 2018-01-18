@@ -18,6 +18,7 @@ import { ShoppingCartComponent } from './restaurant-detail/shopping-cart/shoppin
 import { MenuItemComponent } from './restaurant-detail/menu-item/menu-item.component';
 import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
 
+import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service'
 
 @NgModule({
   declarations: [
@@ -38,7 +39,7 @@ import { ReviewsComponent } from './restaurant-detail/reviews/reviews.component'
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [RestaurantsService],//pra injetar (dependecias) servicos temos que declarar ele aqui em providers,
+  providers: [RestaurantsService, ShoppingCartService],//pra injetar (dependecias) servicos temos que declarar ele aqui em providers,
   //se for dentro de um @component({providers: RestaurantsService})aqui fica disponivel pra o compnet e seus filhos
   //aqui no app.module, fica disponivel pra todos os componentes da aplicacao
   bootstrap: [AppComponent]//starta a aplicacao

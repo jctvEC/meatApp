@@ -18,8 +18,7 @@ export class MenuComponent implements OnInit {
 
 menu: Observable <MenuItem[]>; //pode me retonar qualquer coisa, aqui o profe fez de um outra maneira(do deitail).. pra ver os pipes..
   //nao vamos fazer o subscribe dentro do nginit, vamos deixar pro pipe fazer
-  constructor(private restaurantsService: RestaurantsService,
-                  private route: ActivatedRoute) { }
+  constructor(private restaurantsService: RestaurantsService, private route: ActivatedRoute) { }
 
       ngOnInit() {
         this.menu = this.restaurantsService

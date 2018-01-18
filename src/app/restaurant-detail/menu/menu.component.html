@@ -4,13 +4,13 @@
   <mt-menu-item
    *ngFor= "let item of menu | async"
   [menuItem]="item"
-  (add)="addMenuItem($event)"
+  (add)="shoppingCart.addItem($event)"
   ></mt-menu-item>
   <!-- (add)="addMenuItem($event)" simples metodo do componente para verificarmos se ta captudando o evento de click sober o adicionar e seus dados-->
 </div>
 
 <div class="col-md-3 col-xs-12">
-  <mt-shopping-cart></mt-shopping-cart>
+  <mt-shopping-cart #shoppingCart></mt-shopping-cart>
 <!--tava aqui-->
 </div>
 <!-- FIM DO MENU -->

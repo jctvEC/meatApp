@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+ import { Component, OnInit } from '@angular/core';
 
 import {Restaurant} from './restaurant/restaurant.model'
 import {RestaurantsService} from './restaurants.service'
@@ -38,8 +38,12 @@ export class RestaurantsComponent implements OnInit {
   constructor(private restaurantsService: RestaurantsService) { }//injetandoo servico de restaurant
 
   ngOnInit() {
-     this.restaurantsService.restaurants() /*sub pega requisacao http é feita, chega, essa lista de rests é maepiada pra o json da resposta, um array de rest e pego o q eu receber e passar pro valor da minha propriedade vai ocrrer assicrono, o componente é instancias, as dependecias sao atribuidas (service)  */
-    .subscribe(restaurants => this.restaurants = restaurants)
+    //this.restaurants = this.restaurantsService.restaurants(); nao vamos mais pegas os dados estaticos.
+     this.restaurantsService.restaurants() /*sub pega requisacao http é feita (em service), chega, essa lista de rests é maepiada pra
+     //o json da resposta, um array de rest e pego o q eu receber e passar pro valor da minha propriedade vai ocrrer assicrono, o componente é instancias, as dependecias sao atribuidas (service)  */
+    .subscribe(restaurants => this.restaurants = restaurants)//esse cara age antes da requisitacao, ccomo receberemos um obsvble, usamos o subscribe.
+    //pois toda vez que chegar vez o dado chegar ela é chamada (isso aqui é como se fosse a atualizacao), faz o map lá do service e temos os dados puxados.
+    //Nesse caso, nosso listening seria a lista de restaurante,(cara q espera algum sinal do obsvble), pegamos essa lista e jogamos na propriedade restaurants.
   }
 
 }
